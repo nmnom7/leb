@@ -1,87 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
- integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
-crossorigin="anonymous">
-  <?!= include('JavaScript'); ?>
   </head>
   
   <body>
-    <canvas id="q"></canvas>
-    <script type="text/javascript">
-      var s = window.screen;  //Переменная для выясняющая размер вашего экрана 
-      var width = q.width = s.width;
-      var height = q.height = s.height;
-      var letters = Array(256).join(1).split('');
-
-      var draw = function () {
-        q.getContext('2d').fillStyle='rgba(3,7,27,.05)'; //Тут цвет фона
-        q.getContext('2d').fillRect(0,0,width,height);
-        q.getContext('2d').fillStyle='#87888a'; //Тут цвет букв
-        letters.map(function(y_pos, index){
-          text = String.fromCharCode(65+Math.random()*33);
-          x_pos = index * 10;
-          q.getContext('2d').fillText(text, x_pos, y_pos);
-          letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 20;
-        });
-      };
-      setInterval(draw, 25);
-    </script>
-    <div class="container" style="position: absolute; top: 3%; left: 3%; text-transform: uppercase; color: white; background: #00000004; padding: 10px; text-align: center;">
-            <div class="row">
-                <div class="col-6">
-                    <form id="myForm" onsubmit="handleFormSubmit(this)">
-                        <p class="h4 mb-4 text-center">Contact Details</p>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="first_name">First Name</label>
-                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="last_name">Last Name</label>
-                                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <p>Gender</p>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                                    <label class="form-check-label" for="male">Male</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                                    <label class="form-check-label" for="female">Female</label>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="dateOfBirth">Date of Birth</label>
-                                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                        <div></div>
-                    </form>
-                    <div id="output"></div>
-                </div>
-            </div>      
-        </div>
+    <iframe src="https://script.google.com/macros/s/AKfycbxRM-Tq5YVv_pAIgD2xe_ZGttJMVKrGPXqqeVB87IJWphSPgOXZIiixyGnqRhS0vfj3/exec" width="91%" height="323" frameborder="1"> </iframe>
   </body>
 </html>
 
